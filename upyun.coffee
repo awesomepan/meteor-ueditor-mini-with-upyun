@@ -14,7 +14,6 @@ if Meteor.isServer
       path: '/upload/upyun/image'
       where: 'server'
       action: ->
-        UPYUN.config("juxingyun", "juxingyun", "iamjuxingyun")
         file = RequestData.file("upfile")
         fileContent = fs.readFileSync(file.path)
         fileNewName = uuid.v4() + path.extname(file.name).toLowerCase()
