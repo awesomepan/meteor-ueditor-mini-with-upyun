@@ -19,7 +19,6 @@ if Meteor.isServer
         fileNewName = uuid.v4() + path.extname(file.name).toLowerCase()
         md5Str = md5(fileContent)
         UPYUN.setContentMD5 md5Str
-        UPYUN.setFileSecret "yg"
         editorId = RequestData.get("editorid")
         @response.writeHead 200,
           'Content-Type': 'text/html'
