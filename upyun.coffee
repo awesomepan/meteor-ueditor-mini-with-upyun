@@ -24,7 +24,7 @@ if Meteor.isServer
           'Content-Type': 'text/html'
           'Charset': 'utf-8'
         Async.runSync((done) ->
-          UPYUN.writeFile '/item/home/'+fileNewName, fileContent, true, (err, data) ->
+          UPYUN.writeFile '/items/home/'+fileNewName, fileContent, true, (err, data) ->
             unless err
               done null, err 
               #console.log data
